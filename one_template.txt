@@ -1,14 +1,10 @@
 CONTEXT = [
-  FILES_DS = "$FILE[IMAGE_ID=9180]",
+  FILES_DS = "$FILE[IMAGE_ID=9182]",
   INIT_SCRIPTS = "init.sh trq-createuser.sh",
   NETWORK = "YES",
   SSH_PUBLIC_KEY = "$USER[SSH_PUBLIC_KEY]",
-  START_SCRIPT = "echo 'one contextualisation ...' >> /tmp/context.log
-echo 'preparing scratch drive under /scratch folder ...' >> /tmp/context.log
-mkdir -p /scratch
-mkfs -t xfs /dev/vdb
-mount /dev/vdb /scratch
-chmod 1777 /scratch" ]
+  START_SCRIPT = "mkfs -t xfs /dev/vdb
+mount /dev/vdb /home" ]
 CPU = "1"
 DESCRIPTION = "Template for running CentOS vm with torque-mom"
 DISK = [
