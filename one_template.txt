@@ -1,0 +1,40 @@
+CONTEXT = [
+  FILES_DS = "$FILE[IMAGE_ID=9180]",
+  INIT_SCRIPTS = "init.sh trq-createuser.sh",
+  NETWORK = "YES",
+  SSH_PUBLIC_KEY = "$USER[SSH_PUBLIC_KEY]",
+  START_SCRIPT = "echo 'one contextualisation ...' >> /tmp/context.log
+echo 'preparing scratch drive under /scratch folder ...' >> /tmp/context.log
+mkdir -p /scratch
+mkfs -t xfs /dev/vdb
+mount /dev/vdb /scratch
+chmod 1777 /scratch" ]
+CPU = "1"
+DESCRIPTION = "Template for running CentOS vm with torque-mom"
+DISK = [
+  IMAGE = "centos7.one.torque-mom",
+  IMAGE_UNAME = "dccn-hongl" ]
+DISK = [
+  DRIVER = "raw",
+  IMAGE = "torque.datatemp.ceph.100G",
+  IMAGE_UNAME = "dccn-hongl" ]
+DISK = [
+  SIZE = "8096",
+  TYPE = "swap" ]
+FEATURES = [
+  ACPI = "yes",
+  LOCALTIME = "no" ]
+GRAPHICS = [
+  LISTEN = "0.0.0.0",
+  TYPE = "VNC" ]
+HYPERVISOR = "kvm"
+LOGO = "images/logos/centos.png"
+MEMORY = "8192"
+NIC = [
+  NETWORK = "internet",
+  NETWORK_UNAME = "oneadmin" ]
+NIC = [
+  NETWORK = "dccn-ru.int",
+  NETWORK_UNAME = "dccn-erikb" ]
+OS = [
+  ARCH = "x86_64" ]
