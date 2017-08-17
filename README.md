@@ -4,8 +4,9 @@ Using the [Elastic Computing](http://docs.adaptivecomputing.com/9-1-1/MWS/help.h
 
 The burst-out is implemented in Moab as a QOS tigger that calls a user-provided script for provisioning dynamic pbs_mom nodes in the cloud.  We use [python-oca](https://github.com/python-oca/python-oca) to manage dynamic VMs in the SURFSara HPC Cloud.
 
-## Requirement on Torque/Moab server
+## Preparing the Torque/Moab server
 
+- install Moab 9.1 + Torque 6.1.1
 - install the latest version of python-oca from github
 - configure Moab with a QOS trigger
 - provide a script for Moab to create and remove VMs from the cloud
