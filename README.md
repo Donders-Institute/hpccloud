@@ -1,8 +1,8 @@
 # Integrating OpenNebula cloud resource with Moab cluster
 
-Using the Elastic Computing feature of Moab, the aim is to burst out HPC cluster resources to the SURFSara HPC cloud, and OpenNebula-based IaaS cloud.
+Using the [Elastic Computing](http://docs.adaptivecomputing.com/9-1-1/MWS/help.htm#topics/moabWorkloadManager/topics/ElasticComputing/elasticComputingOverview.htm?Highlight=Elastic) feature of Moab, the aim is to burst out HPC cluster resources to the SURFSara HPC cloud, and OpenNebula-based IaaS cloud.
 
-The burst-out is implemented in Moab as a QOS tigger that calls a user-provided script for provisioning dynamic pbs_mom nodes in the cloud.  We use the python-oca to manage dynamic VMs in the SURFSara HPC Cloud.
+The burst-out is implemented in Moab as a QOS tigger that calls a user-provided script for provisioning dynamic pbs_mom nodes in the cloud.  We use [python-oca](https://github.com/python-oca/python-oca) to manage dynamic VMs in the SURFSara HPC Cloud.
 
 ## Requirement on Torque/Moab server
 
